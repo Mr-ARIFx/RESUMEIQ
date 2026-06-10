@@ -1,0 +1,8 @@
+{
+  "name": "ResumeIQ",
+  "description": "AI-powered Resume Analysis and ATS Optimization platform that analyzes resume structure, calculates compatibility scores, matches against jobs, and extracts key insights.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

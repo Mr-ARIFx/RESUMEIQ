@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+@variant dark (&:where(.dark, .dark *));
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  /* Complete premium custom slate colors definition */
+  --color-slate-105: #f4f6fa;
+  --color-slate-150: #ebf0f5;
+  --color-slate-205: #dee5ed;
+  --color-slate-335: #bfcddc;
+  --color-slate-330: #bfcddc;
+  --color-slate-450: #7e92b3;
+  --color-slate-550: #576e93;
+  --color-slate-650: #3f5577;
+  --color-slate-655: #3c5071;
+  --color-slate-705: #2f415c;
+  --color-slate-755: #213045;
+  --color-slate-805: #1c2a3e;
+  --color-slate-850: #131f32;
+
+  /* Custom Helper Status Colors (Status pill background, highlights, borders) */
+  --color-blue-105: #ebf2ff;
+  --color-blue-455: #477bf0;
+  
+  --color-emerald-55: #f1fcf7;
+  --color-emerald-105: #daf9e9;
+  --color-emerald-455: #1e9d5d;
+  --color-emerald-955: #042915;
+
+  --color-rose-455: #df3549;
+  --color-rose-955: #36070f;
+
+  --color-amber-455: #cc740c;
+  --color-amber-955: #2a1503;
+
+  --color-orange-850: #4a2108;
+  --color-orange-955: #2e1103;
+
+  --color-purple-955: #26053d;
+}
+
+@layer utilities {
+  /* Print Optimization Styles */
+  @media print {
+    body {
+      background: white !important;
+      color: #0f172a !important;
+    }
+    html, body {
+      font-size: 12px !important;
+    }
+    header, nav, #app-navbar, #theme-toggle, .print\:hidden, button, select, textarea, form, input {
+      display: none !important;
+    }
+    .print\:p-0 {
+      padding: 0 !important;
+    }
+    .shadow-sm, .shadow-md, .shadow-xl {
+      box-shadow: none !important;
+    }
+    .bg-white, .dark\/bg-slate-900 {
+      background: transparent !important;
+      border-color: #e2e8f0 !important;
+    }
+    .bg-slate-50, .dark\/bg-slate-950\/30 {
+      background: #f8fafc !important;
+    }
+  }
+}
+
